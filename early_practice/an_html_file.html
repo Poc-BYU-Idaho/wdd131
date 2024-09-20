@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- The "defer" inside the script tags makes it so that the Javascript runs after all the HTML has been loaded. If you get rid of it, the number of apples won't display on the webpage because the JavaScript code ran before the IDs myAppleElement, friendAppleElement, and totalApplesElement existed. -->
+    <script src="a_javascript_file.js" defer></script>
+</head>
+<body>
+    <p>
+        If you have <span id="myAppleElement"></span> apples, and your friend has
+        <span id="friendAppleElement"></span>. Then together you have
+        <span id="totalApplesElement"></span> apples!
+    </p>
+</body>
+</html>
