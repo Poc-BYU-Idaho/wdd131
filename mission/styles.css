@@ -6,6 +6,11 @@
     border-width: 1px;
 }
 
+.dark {
+    background-color: #333;
+    color: white;
+}
+
 h1, h3 {
     text-align: center;
 }
@@ -20,6 +25,10 @@ h3 {
     font-size: 14px;
     color: #006EB6;
     margin-bottom: 0px;
+}
+
+.dark h3 {
+    color: #FFFFFF;
 }
 
 hr {
