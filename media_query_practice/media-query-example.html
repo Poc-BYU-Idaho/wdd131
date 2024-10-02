@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: blue
+        }
+
+        /* If your browser has a max width of 700px or smaller, use this CSS. @media allows you to change a webpage based on how it's being viewed. This CSS section acts like an if statement (if browser window has a width of 700px or smaller, resize the element(s) with the .box class.). If you open this with live server in the bottom right, then resize your window, you'll see the size of the box change. */
+        @media (max-width: 700px) {
+            .box {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>
