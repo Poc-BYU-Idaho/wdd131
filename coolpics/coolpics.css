@@ -15,20 +15,18 @@ margin: 0px;
 background-color: var(--text-light);
 }
 
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
 
-
-
-/* Hard coded height */
 header {
     background-color: var(--primary-color);
     text-align: center;
     color: var(--text-light);
-    height: 260px;
+    padding-bottom: 20px;
 }
-
-
-
-
 
 header h1 {
     margin: 0px;
@@ -62,19 +60,11 @@ main {
     text-align: center;
 }
 
-
-
-/* Hard coded height and width to make these display correctly */
 figure {
     box-shadow: 10px 10px 10px gray;
     border: 7px solid white;
-    width: 300px;
-    height: 225px;
     margin: 20px auto;
 }
-
-
-
 
 img {
     max-width: 100%;
@@ -97,9 +87,6 @@ footer {
     }
 }
 
-
-
-/* Hard coded height again */
 @media screen and (min-width: 1000px) {
     .gallery {
         display: grid;
@@ -110,9 +97,6 @@ footer {
     }
     header a {
         display: inline;
-        margin: 0px 80px;
-    }
-    header {
-        height: 100px;
+        margin: 0px 50px;
     }
 }
