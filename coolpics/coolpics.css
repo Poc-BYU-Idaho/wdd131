@@ -51,7 +51,7 @@ header a {
 }
 
 a:link, a:visited {
-color: var(--text-light);
+    color: var(--text-light);
 }
 
 main h3 {
