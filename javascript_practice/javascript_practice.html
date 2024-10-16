@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="btn">Click Me</button>
+
+    <ul id="list">
+        <li>Hello1</li>
+        <li>Hello2</li>
+        <li>Hello3</li>
+        <li>Hello4</li>
+        <li>Hello5</li>
+        <li>Hello6</li>
+        <li>Hello7</li>
+    </ul>
+
+    <script>
+
+        // Creating an object in JavaScript. It has a name and a function.
+        const person = {
+            name: "Brother Willden",
+
+            getName: () => {
+                return "Brother Willden"
+            }
+        }
+        // Call the getName function from the person object and log the result to the console.
+        console.log(person.getName())
+
+
+
+        // Add an event listener to the button that checks for clicks. When it's clicked, log to the console that it worked.
+        const button = document.getElementById("btn")
+        button.addEventListener("click", handleClick)
+        function handleClick() {
+            console.log("Click worked")
+        }
+
+
+
+        // Create a for loop that prints 0-10 to the console.
+        for (let i = 0; i<=10; i++) {
+            console.log(i)
+        }
+
+
+
+        // Display the text of every child element in the list.
+        const list = document.getElementById("list")
+        for (let i = 0; i < list.children.length; i++) {
+            const childContent = list.children[i].textContent
+            console.log(childContent)
+        }
+
+
+    </script>
+
+</body>
+</html>
