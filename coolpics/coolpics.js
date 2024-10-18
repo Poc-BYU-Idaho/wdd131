@@ -25,17 +25,17 @@ function viewerTemplate(imagePath, altText) {
     <button class="close-viewer">X</button>
     <img src="${imagePath}" alt="${altText}">
     </div>`;
-}
+}   
 
 function viewHandler(event) {
 	// create a variable to hold the element that was clicked on from event.target
     const clickedImage = event.target
 
 	// get the src attribute from that element and 'split' it on the "-"
-    const srcAttribute = clickedImage.getAttribute("src").split("s-")
+    const srcAttribute = clickedImage.getAttribute("src").split("-")
 
 	// construct the new image file name by adding "-full.jpeg" to the first part of the array from the previous step
-    const newImagePath = srcAttribute[0] + "s-full.jpeg"
+    const newImagePath = srcAttribute[0] + "-full.jpeg"
 
 	// insert the viewerTemplate into the top of the body element
     const htmlBody = document.querySelector("body")
