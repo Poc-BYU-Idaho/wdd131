@@ -9,10 +9,10 @@
     }
 
 body {
-font-family: var(--primary-font);
-font-size: 1.2em;
-margin: 0px;
-background-color: var(--text-light);
+    font-family: var(--primary-font);
+    font-size: 1.2em;
+    margin: 0px;
+    background-color: var(--text-light);
 }
 
 .gallery {
@@ -42,7 +42,7 @@ header button {
     margin-bottom: 10px;
 }
 
-header a {
+nav a {
     font-size: .9em;
     display: block;
     margin-bottom: 10px;
@@ -66,9 +66,10 @@ figure {
     margin: 20px auto;
 }
 
-img {
+figure img {
     max-width: 100%;
     object-fit: cover;
+    cursor: pointer;
 }
 
 footer {
@@ -80,13 +81,54 @@ footer {
     margin-top: 40px;
 }
 
+.viewer {
+    position: fixed;
+    display: grid;
+    grid-template-rows: auto, 1fr;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left:0;
+    bottom:0;
+    right:0;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: var(--text-light);
+    z-index: 10;
+}
+
+.viewer button {
+    color: var(--text-light);
+    background-color: transparent;
+    border: none;
+    justify-self: end;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.viewer img {
+    max-height: 80vh;
+    max-width: 90vw;
+}
+
+.hide {
+    display: none;
+}
+
+/* Medium size screen. Default CSS is for small screens. */
 @media screen and (min-width: 700px) {
     .gallery {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+    .viewer img {
+        max-height: 90vh;
+        max-width: 90vw;
+    }
 }
 
+/* Large screen */
 @media screen and (min-width: 1000px) {
     .gallery {
         display: grid;
@@ -95,8 +137,17 @@ footer {
     header button {
         display: none;
     }
-    header a {
+    nav a {
         display: inline;
         margin: 0px 50px;
+    }
+    .viewer {
+        top: 25px;
+        left: 40px;
+        bottom: 20px;
+        right: 40px;
+    }
+    .viewer img {
+        max-height: 80vh;
     }
 }
