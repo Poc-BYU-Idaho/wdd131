@@ -1,0 +1,76 @@
+:root {
+    --gold-color: #EFC69B;
+    --red-color: #AF1B3F;
+    --dark-color: #473144;
+    --body-font: Helvetica, Arial, sans-serif;
+    --headline-font: Lora, Impact, serif
+}
+
+body {
+    margin: 0px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+header h1 {
+    font-family: var(--headline-font);
+    color: var(--dark-color);
+    text-align: center;
+}
+
+header nav {
+    border-top: 1px solid var(--gold-color);
+    border-bottom: 1px solid var(--gold-color);
+}
+
+.main-nav {
+    display: grid;
+    grid-template-columns: 75px 75px 75px;
+    justify-content: end;
+    justify-items: end;
+    list-style-type: none;
+    margin-right: 7em;
+}
+
+.main-nav a {
+    color: #333;
+    text-decoration: none;
+    color: var(--red-color)
+}
+
+.skiptocontent a {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: black;
+    text-decoration: none;
+    color: red;
+}
+
+.skiptocontent a:focus {
+    top: 0px;
+}
+
+
+
+
+.book {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.book-info {
+    color: var(--dark-color);
+}
+
+.book-main h2 {
+    color: var(--red-color);
+}
+
+.book-main img {
+    width: 220px;
+    height: auto;
+}
