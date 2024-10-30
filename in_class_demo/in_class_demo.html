@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            background-color: blue;
+            color: white;
+            padding: 8px 10px;
+            border-radius: 5px;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            /* transition: ease all 300ms; */
+            margin-top: 10px;
+            position: absolute;
+        }
+
+        button:hover {
+            background-color: blueviolet;
+            /* margin-top: 20px; */
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <button>Click Me</button>
+
+
+
+    <script>
+        const button = document.querySelector("button")
+        let counter = 0
+        let isReverse = false
+
+
+        // This makes the button move. setInterval runs a function every set number of milliseconds. In this case, it runs every 1ms.
+        setInterval(() => {
+            if (counter > 500) {
+                isReverse = true
+            }
+            else if (counter < 0) {
+                isReverse = false
+            }
+
+            if (isReverse) {
+                button.style.marginLeft = --counter + "px"
+            }
+            else {
+                button.style.marginLeft = ++counter + "px"
+            }
+        }, 1)
+
+
+        // This makes the button follow your mouse. Turn off the transition CSS property to make this smoother.
+        // document.addEventListener("mousemove", (event) => {
+        //     button.style.top = event.pageY + "px"
+        //     button.style.left = event.pageX + "px"
+
+        //     console.log(event)
+        // })
+    </script>
+
+</body>
+</html>
