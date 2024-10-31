@@ -1,4 +1,5 @@
 // This array was provided with the assignment. I didn't make it. The book title and cover don't match for the 2nd book.
+// This is a GitHub push test.
 const articles = [
 	{
 		id: 1,
