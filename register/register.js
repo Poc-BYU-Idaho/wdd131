@@ -63,6 +63,7 @@ function successTemplate(info) {
 }
 
 
+
 function totalFees() {
     // the selector below lets us grab any element that has an id that begins with "fee"
     let feeElements = document.querySelectorAll("[id^=fee]");
