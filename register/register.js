@@ -59,7 +59,7 @@ function participantTemplate(count) {
 
 
 function successTemplate(info) {
-    return `Thank you ${info.name} for registering. You have registered ${info.participantCount} participants and owe ${info.feeTotal} in fees.`
+    return `Thank you ${info.name} for registering. You have registered ${info.participantCount} participants and owe $${info.feeTotal} in fees.`
 }
 
 
