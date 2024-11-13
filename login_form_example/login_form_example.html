@@ -1,0 +1,97 @@
+<!-- This is from a class announcement. The professor made this in one of our class periods. -->
+
+<!-- Hey all, today we built this simple login form with a little javascript validation. Typically you won't put style and script tags inline like I did, but for simplicity I did. You'll pull it out into actual css and javascript files. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+      form {
+        min-width: 300px;
+        padding: 20px;
+        box-shadow: 0 0 5px -2px black;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      input {
+        font-size: 16px;
+        padding: 8px 12px;
+        border-radius: 4px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .login {
+        background-color: #4f4faf;
+        color: white;
+        padding: 8px 10px;
+        border-radius: 5px;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+        transition: ease all 300ms;
+        margin-top: 10px;
+      }
+
+      .login:hover {
+        background-color: #6868c3;
+      }
+
+      .message {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="login-form">
+      <h1>Login</h1>
+      <span class="message">&nbsp;</span>
+      <input type="text" class="username" autofocus placeholder="Username" />
+      <input class="password" type="password" placeholder="Password" />
+      <button class="login" type="submit">Login</button>
+    </form>
+
+    <script>
+      const form = document.querySelector(".login-form");
+      const username = document.querySelector(".username");
+      const password = document.querySelector(".password");
+      const message = document.querySelector(".message");
+
+      function insertMessage(msg) {
+        message.innerHTML = msg;
+      }
+
+      function onLogin(event) {
+        event.preventDefault();
+
+        if (!username.value || !password.value) {
+          insertMessage("Username or password is missing");
+        }
+
+        if (password.value.length < 2) {
+          insertMessage("Password is too short");
+        }
+      }
+
+      form.addEventListener("submit", onLogin);
+    </script>
+  </body>
+</html>
