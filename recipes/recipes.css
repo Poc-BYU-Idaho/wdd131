@@ -9,9 +9,12 @@
 
 
 
+
+
 body {
     margin: 0px;
     font-family: var(--primary-font);
+    max-width: 960px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -20,14 +23,20 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #mainLogo {
-    text-align: center;
     margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 #mainLogo img {
-    height: 40px;
-    text-align: center;
     height: 100px;
 }
 
@@ -36,12 +45,10 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 3em;
 }
 
-
-
 #searchInput {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    width: 100%;
 }
 
 /* I hide this label because I don't want it to display on the page, but I still have it exist so screenreaders can read its text. */
@@ -62,14 +69,15 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 0px 6px 6px 0px;
 }
 
-
-
 #horizontalLine {
-    height: 2px;
+    height: 1px;
+    width: 100%;
     background-color: black;
     opacity: .3;
-    margin: 30px auto;
+    margin: 25px 0px;
 }
+
+
 
 
 
@@ -84,8 +92,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .recipe img {
-    width: 100%;
     margin-bottom: 6px;
+    width: 100%;
+    height: auto;
 }
 
 .recipe-info {
@@ -96,9 +105,10 @@ h1, h2, h3, h4, h5, h6 {
 .recipe-tags {
     border: 1px solid black;
     display: inline-block;
-    /* How to make it fit text? */
+    width: fit-content;
     text-align: center;
     font-size: 1.5em;
+    padding: 3px 10px
 }
 
 .recipe h2 {
@@ -110,12 +120,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .rating {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .recipe-description {
     display: none;
 }
+
+
 
 
 
@@ -128,23 +140,24 @@ footer {
 .social {
     display: flex;
     justify-content: center;
-    gap: 5px;
+    gap: 7px;
 }
 
 footer a {
-    font-size: .9em;
     color: var(--primary-color);
     text-decoration: none;
 }
 
 .social img {
-    height: 50px;
+    height: 60px;
     margin-bottom: 5px;
 }
 
 
 
-/* This makes images resize with the page. */
+
+
+/* This prevents images from becoming larger than the space they have available. */
 img {
 	max-width: 100%;
 }
@@ -153,32 +166,58 @@ img {
 
 
 
+@media screen and (min-width: 600px) {
+    #searchInput input {
+        border-radius: 6px 0px 0px 6px;
+        width: 80%;
+        height: 30px;
+        font-size: 1.3em;
+    }
 
+    #searchInput img {
+        height: 33.5px;
+        border: 1px solid black;
+        border-radius: 0px 6px 6px 0px;
+    }
 
-/* Media query stuff here */
+    #horizontalLine {
+        width: 90%;
+    }
 
+    .recipe {
+        flex-direction: row;
+        width: 90%;
+    }
 
-/* #searchInput {
-    width: 90%;
-} */
+    .recipe img {
+        width: 40%;
+        margin-bottom: 0px;
+        margin-right: 20px;
+    }
 
+    .recipe-tags {
+        font-size: 1.2em;
+    }
 
+    .recipe h2 {
+        font-size: 1.8em;
+    }
 
-/* #horizontalLine {
-    width: 90%;
-} */
+    .recipe-description {
+        display: block;
+    }
 
+    .social {
+        justify-content: right;
+        width: 85%;
+        margin: 0 auto;
+    }
 
+    .social img {
+        height: 35px;
+    }
 
-/* .recipe {
-    flex-direction: row;
-    max-width: 90%;
-} */
-
-/* .recipe img {
-    margin-bottom: 0px;
-} */
-
-/* .recipe-description {
-    display: block;
-} */
+    footer a {
+        font-size: .7em;
+    }
+}
