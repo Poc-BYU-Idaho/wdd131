@@ -9,59 +9,75 @@
     <meta property="og:type" content="website" />
     <meta property="og:description" content="A collection of recipes">
     <meta property="og:image" content="https://www.allrecipes.com/thmb/h3fFBQCOrCRUcgAoA007QG3Aszk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/12409-apple-crisp-II-MFS-033-beauty1-4x3-e7f6d6c193484e0daa43e571723ff16e.jpg">
-
-
-
-    <!-- ADD THIS AFTER PUSHING TO GITHUB. -->
-    <meta property="og:url" content="URL of the page">
-
-
-
+    <meta property="og:url" content="https://poc-byu-idaho.github.io/wdd131/recipes/index.html">
     <meta name="twitter:card" content="summary_large_image">
     <title>Recipe Book</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="recipes.css">
     <script src="main.js" defer></script>
 </head>
 <body>
 
+
     <header>
-        <img src="images/recipe-book.png" alt="site logo">
-        <h1>RecipeBook</h1>
-        <form action="">
+
+        <div id="mainLogo">
+            <img src="images/recipe-book.png" alt="site logo">
+            <h1>RecipeBook</h1>
+        </div>
+
+        <form action="" id="searchInput">
+
             <label for="search">Search</label>
             <input type="text" id="search" name="search" placeholder="Find a recipe">
-            <!-- Put in Brother Willden's code. Position relative makes it so that children with position absolute reference the element with position relative instead of the entire document. -->
+            <img src="images/search.svg" alt="search icon">
+
         </form>
+
+        <div id="horizontalLine"></div>
+
     </header>
 
+
     <main>
+
         <section id="recipes">
             <div class="recipe">
-                <!-- The aria-label will be read by the screen reader, and the aria-hidden="true" on the stars will tell the screen reader to ignore those and they will not be read. -->
-                <span
-                    class="rating"
-                    role="img"
-                    aria-label="Rating: 4 out of 5 stars"
-                >
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star-empty">⭐</span>
-                    <span aria-hidden="true" class="icon-star-empty">☆</span>
-                </span>
+                <img src="images/apple-crisp.jpg" alt="apple crisp">
+                <div class="recipe-info">
+                    <span class="recipe-tags">dessert</span>
+                    <h2>Apple Crisp</h2>
+                    <!-- The aria-label will be read by the screen reader, and the aria-hidden="true" on the stars will tell the screen reader to ignore those so they will not be read. -->
+                    <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star-empty">⭐</span>
+                        <span aria-hidden="true" class="icon-star-empty">☆</span>
+                    </span>
+                    <span class="recipe-description">This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</span>
+                </div>
             </div>
         </section>
+
     </main>
 
+
     <footer>
-        <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
+
         <div class="social">
             <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
             <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
             <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
             <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
         </div>
+
+        <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
+
     </footer>
+
 
 </body>
 </html>

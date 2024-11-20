@@ -1,20 +1,184 @@
-/* h1 {
-    display: inline;
-} */
-
-footer a {
-    font-size: 0.6em;
+:root {
+    --primary-color: #1B98E0;
+    --secondary-color: #59c3c3;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: "Patrick Hand", Arial, Helvetica, sans-serif;
 }
 
+
+
+body {
+    margin: 0px;
+    font-family: var(--primary-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--secondary-font);
+}
+
+
+
+#mainLogo {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#mainLogo img {
+    height: 40px;
+    text-align: center;
+    height: 100px;
+}
+
+#mainLogo h1 {
+    display: inline;
+    font-size: 3em;
+}
+
+
+
+#searchInput {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* I hide this label because I don't want it to display on the page, but I still have it exist so screenreaders can read its text. */
+#searchInput label {
+    display: none;
+}
+
+#searchInput input {
+    border-radius: 6px 0px 0px 6px;
+    width: 80%;
+    height: 40px;
+    font-size: 1.3em;
+}
+
+#searchInput img {
+    height: 44px;
+    border: 1px solid black;
+    border-radius: 0px 6px 6px 0px;
+}
+
+
+
+#horizontalLine {
+    height: 2px;
+    background-color: black;
+    opacity: .3;
+    margin: 30px auto;
+}
+
+
+
+.recipe {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 22px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.recipe img {
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+.recipe-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-tags {
+    border: 1px solid black;
+    display: inline-block;
+    /* How to make it fit text? */
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.recipe h2 {
+    display: inline;
+    color: var(--primary-color);
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 2.2em;
+}
+
+.rating {
+    margin-bottom: 30px;
+}
+
+.recipe-description {
+    display: none;
+}
+
+
+
+footer {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+footer a {
+    font-size: .9em;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.social img {
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+
+
+/* This makes images resize with the page. */
 img {
 	max-width: 100%;
 }
 
-/* Explain why it's hidden */
-/* form label {
-    display: none;
+
+
+
+
+
+
+/* Media query stuff here */
+
+
+/* #searchInput {
+    width: 90%;
 } */
 
 
 
-/* Start with mobile design and flex column. When the page gets wide, change it to row. Read assignment for more information. */
+/* #horizontalLine {
+    width: 90%;
+} */
+
+
+
+/* .recipe {
+    flex-direction: row;
+    max-width: 90%;
+} */
+
+/* .recipe img {
+    margin-bottom: 0px;
+} */
+
+/* .recipe-description {
+    display: block;
+} */
