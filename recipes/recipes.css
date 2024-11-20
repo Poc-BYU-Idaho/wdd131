@@ -1,0 +1,20 @@
+/* h1 {
+    display: inline;
+} */
+
+footer a {
+    font-size: 0.6em;
+}
+
+img {
+	max-width: 100%;
+}
+
+/* Explain why it's hidden */
+/* form label {
+    display: none;
+} */
+
+
+
+/* Start with mobile design and flex column. When the page gets wide, change it to row. Read assignment for more information. */
