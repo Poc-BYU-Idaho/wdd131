@@ -45,25 +45,25 @@ header {
     font-size: 3em;
 }
 
-#searchInput {
+#searchForm {
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
 /* I hide this label because I don't want it to display on the page, but I still have it exist so screenreaders can read its text. */
-#searchInput label {
+#searchForm label {
     display: none;
 }
 
-#searchInput input {
+#searchForm input {
     border-radius: 6px 0px 0px 6px;
     width: 80%;
     height: 40px;
     font-size: 1.3em;
 }
 
-#searchInput img {
+#searchForm img {
     height: 44px;
     border: 1px solid black;
     border-radius: 0px 6px 6px 0px;
@@ -167,14 +167,14 @@ img {
 
 
 @media screen and (min-width: 600px) {
-    #searchInput input {
+    #searchForm input {
         border-radius: 6px 0px 0px 6px;
         width: 80%;
         height: 30px;
         font-size: 1.3em;
     }
 
-    #searchInput img {
+    #searchForm img {
         height: 33.5px;
         border: 1px solid black;
         border-radius: 0px 6px 6px 0px;
