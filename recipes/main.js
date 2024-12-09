@@ -1,6 +1,6 @@
 // I could change the import name of "recipes" to anything and the code would still work 
 // because recipes is the default export from recipes.mjs
-// Also, note that I'm not using curly braces around "recipes." They're only for named exports.
+// Also note that I'm not using curly braces around "recipes." They're only for named exports.
 // Putting curly braces around it would actually prevent it from working.
 // Also notice the "./" at the beginning of the filepath.
 // This tells JavaScript that the path is relative to this file,

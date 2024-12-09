@@ -1,0 +1,1 @@
+import exercises from "./exercises.mjs"

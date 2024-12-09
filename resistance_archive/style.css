@@ -1,0 +1,71 @@
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color: #000000;
+    --accent1-color: #1B1188;
+    --accent2-color: #8650C1;
+  
+    --font: arial, sans-serif;
+}
+
+body {
+    font-family: var(--font);
+    margin: 0;
+}
+
+header img {
+    /* This has to be displayed as block in order for the margin property to center it correctly. I think it's because the auto value adjusts the left and right margins to split the available horizontal space equally. If the element's edges are at the edges of the screen (because it's displayed as block), the available horizontal space is the entire width of the screen, and auto will center it properly. If it's displayed inline, there's no available horizontal space at the sides of the element because the element only takes up as much space as it is big.  */
+    display: block;
+    margin: 50px auto 30px auto;
+    width: 500px;
+}
+
+header p {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 1.3em;
+    line-height: 26px;
+    margin-bottom: 30px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#searchResultsBox {
+    height: 350px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+main form {
+    width: 100%;
+}
+
+main form label {
+    display: none;
+}
+
+main form input {
+    height: 40px;
+    width: 99%;
+    font-size: 1.3em;
+
+    /* This has to be displayed as block in order for margin: 0 auto to center it correctly. */
+    display: block;
+    margin: 0 auto;
+}
+
+main p {
+    align-self: flex-start;
+    margin-bottom: 2px;
+    font-size: 1.3em;
+}
+
+#searchResultsBox li a {
+    font-size: 1.2em;
+    color: black;
+}
