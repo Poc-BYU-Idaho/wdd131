@@ -3,40 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EXERCISE NAME HERE</title>
+    <title>             EXERCISE NAME HERE           </title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="exercise.css">
-    <script src="" type="module"> defer</script>
+    <script src="exercise.js" type="module"> defer</script>
 </head>
+
 <body>
 
     <header>
-        <img src="images/resistance_logo_light.png" alt="Resistance Archive logo" id="logo">
+        <a href="index.html">
+            <img src="images/resistance_logo_light.png" alt="Resistance Archive logo" id="logo">
+            <img src="images/mini_resistance_logo_light.png" alt="Resistance Archive logo" id="miniLogo">
+        </a>
+
+        <div id="colorBand1"></div>
+        <div id="colorBand2"></div>
     </header>
 
     <main>
-        Exercise Name
+        <p id="exerciseName">Exercise Name</p>
 
-        Video here
+        <iframe src="https://www.youtube.com/embed/gMgvBspQ9lk?si=FoGya8dnJ36EAR8v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-        <p>Muscles Targeted</p>
-        <ul>
-            <li>
-                Muscle
-            </li>
+        <div id="exerciseInfo">
+            <p id="musclesTargeted">Muscles Targeted</p>
+            <ul>
+                <li>
+                    Muscle
+                </li>
+    
+                <li>
+                    Muscle
+                </li>
+    
+                <li>
+                    Muscle
+                </li>
+            </ul>
 
-            <li>
-                Muscle
-            </li>
-
-            <li>
-                Muscle
-            </li>
-        </ul>
+            <p>Video Credit - YouTube Channel Name</p>
+        </div>
     </main>
-
-    <footer>
-        <p>Video Credit - YouTube Channel Name</p>
-    </footer>
 
 </body>
 </html>

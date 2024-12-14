@@ -1,13 +1,12 @@
 <!-- Site Ideas -->
-<!-- Allow people to search for exercises based off of their names -->
-<!-- Sort exercises alphabetically. -->
 <!-- Create check boxes that allow people to filter for certain muscle groups. -->
 <!-- Look at Copilot chats for help with this. -->
 <!-- When someone clicks an exercise, take them to a child page that the exercise's information is dynamically loaded onto. -->
-<!-- Maybe add a dark mode. -->
-
-
-
+<!-- If I create the muscle checkboxes, I should make the search show exercises that contain any of the selected muscles, not all of the selected muscles (Using OR not AND). -->
+<!-- I need to create a function that iterates over a list of targeted muscles and returns true if they're in the set of selected muscles. I will only use this function if the selected muscles set isn't empty. -->
+<!-- retrieve the input element from the DOM. Then add an event listener for "keypress". This will allow me to live reload the page. "onchange" is another potential event listener."  -->
+<!-- I thought about adding a dark mode, but my logo causes a lot of complications. It would be easier if my logo looked good on both light and dark backgrounds.  -->
+<!-- Filter list of li or erase exercise list and re-load it? -->
 
 
 
@@ -19,30 +18,63 @@
     <title>Resistance Archive</title>
     <link rel="stylesheet" href="style.css">
     <script src="main.js" type="module"> defer</script>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
 </head>
+
 <body>
 
     <header>
-        <img src="images/resistance_logo_light.png" alt="Resistance Archive logo" id="logo">
-        <p>Welcome to the Resistance Archive. Here, I have compiled a list of various resistance training exercises as well as instructional videos on how to perform them. Use the search box below to start finding exercises.</p>
+        <a href="index.html">
+            <img src="images/resistance_logo_light.png" alt="Resistance Archive logo" id="logo">
+            <img src="images/mini_resistance_logo_light.png" alt="Resistance Archive logo" id="miniLogo">
+        </a>
+
+        <div id="colorBand1"></div>
+        <div id="colorBand2"></div>
+
+        <p>Welcome to Resistance Archive. Here, I have compiled a list of various resistance training exercises as well as instructional videos on how to perform them. Use the search box below to start finding exercises.</p>
     </header>
 
     <main>
-        <form action="" id="searchForm">
-            <label for="search">Search</label>
-            <input type="text" id="searchInputBox" name="search" placeholder="Enter exercise name here">
-        </form>
+        <label for="search" id="searchLabel">Search</label>
+        <input type="text" name="search" id="searchInputBox" placeholder="Enter exercise name here">
+
+        <div id="muscleCheckboxes">
+            <div>
+                <label for="chest">Chest</label>
+                <input type="checkbox" id="chest">
+            </div>
+            <div>
+                <label for="triceps">Triceps</label>
+                <input type="checkbox" id="triceps">
+            </div>
+            <div>
+                <label for="back">Back</label>
+                <input type="checkbox" id="back">
+            </div>
+            <div>
+                <label for="biceps">Biceps</label>
+                <input type="checkbox" id="biceps">
+            </div>
+            <div>
+                <label for="quads">Quads</label>
+                <input type="checkbox" id="quads">
+            </div>
+            <div>
+                <label for="hamstrings">Hamstrings</label>
+                <input type="checkbox" id="hamstrings">
+            </div>
+            <div>
+                <label for="glutes">Glutes</label>
+                <input type="checkbox" id="glutes">
+            </div>
+        </div>
 
         <p>Results:</p>
 
         <div id="searchResultsBox">
-            <ul>
-                <li>
-                    <a href="" target="_blank">This is a test for an exercise name: Deadlift</a>
-                </li>
-                <li>
-                    <a href="" target="_blank">aa</a>
-                </li>
+            <ul id="searchResultsList">
+
             </ul>
         </div>
     </main>
