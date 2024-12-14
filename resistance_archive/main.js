@@ -56,7 +56,7 @@ searchInputBox.addEventListener("input", () => {
 
     // Add every exercise whose name contains the search query and targets the checked muscles (if they're checked at all).
     exercises.forEach(exercise => {
-        if (exercise.name.toLowerCase().includes(searchQuery) && (exercise.targetedMuscles.some(targetedMuscle => checkedMuscles.has(targetedMuscle)) || checkedMuscles.size == 0)) {
+        if (exercise.name.toLowerCase().includes(searchQuery) && (exercise.targetedMuscles.some(targetedMuscle => checkedMuscles.has(targetedMuscle.toLowerCase())) || checkedMuscles.size == 0)) {
 
             searchResultsList.innerHTML += createExerciseLink(exercise)
         }
@@ -89,7 +89,7 @@ checkboxes.forEach(checkbox => checkbox.addEventListener("change", () => {
 
     // Add every exercise whose name contains the search query and targets the checked muscles (if they're checked at all).
     exercises.forEach(exercise => {
-        if (exercise.name.toLowerCase().includes(searchQuery) && (exercise.targetedMuscles.some(targetedMuscle => checkedMuscles.has(targetedMuscle)) || checkedMuscles.size == 0)) {
+        if (exercise.name.toLowerCase().includes(searchQuery) && (exercise.targetedMuscles.some(targetedMuscle => checkedMuscles.has(targetedMuscle.toLowerCase())) || checkedMuscles.size == 0)) {
 
             searchResultsList.innerHTML += createExerciseLink(exercise)
         }
