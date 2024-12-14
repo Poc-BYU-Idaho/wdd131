@@ -79,7 +79,7 @@ main {
 }
 
 #muscleCheckboxes input {
-    transform: scale(1.5);
+    transform: scale(1.8);
 }
 
 main p {
@@ -129,6 +129,10 @@ main p {
     #muscleCheckboxes label {
         font-size: 1em;
     }
+
+    #muscleCheckboxes input {
+        transform: scale(1.5);
+    }
 }
 
 
@@ -138,6 +142,7 @@ main p {
     #muscleCheckboxes {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 20px;
 
         /* The checkboxes are right aligned (see selector below), which makes the checkboxes all shift to the right. Moving the grid to the start of the flexbox and shortening its width helps to fix this unintended effect. */
         align-self: flex-start;
