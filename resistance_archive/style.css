@@ -93,7 +93,7 @@ main p {
     height: 440px;
     width: 100%;
     overflow-y: auto;
-    border: 1px solid black;
+    border: 1px solid var(--secondary-color);
 
     /* This prevents the box from touching the bottom of the page when the viewport is smaller. */
     margin-bottom: 50px;
@@ -105,7 +105,7 @@ main p {
 
 #searchResultsBox li a {
     font-size: 1.4em;
-    color: black;
+    color: var(--secondary-color);
 }
 
 
