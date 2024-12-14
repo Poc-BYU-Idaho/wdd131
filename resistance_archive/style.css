@@ -138,7 +138,7 @@ main p {
 
 
 /* Put a grid in place for the checkboxes when they start squeezing together to tightly. */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     #muscleCheckboxes {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
