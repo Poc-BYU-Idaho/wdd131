@@ -19,6 +19,10 @@ header a img {
     width: 500px;
 }
 
+#miniLogo {
+    display: none;
+}
+
 header p {
     width: 70%;
     margin: 0 auto;
@@ -90,6 +94,9 @@ main p {
     width: 100%;
     overflow-y: auto;
     border: 1px solid black;
+
+    /* This prevents the box from touching the bottom of the page when the viewport is smaller. */
+    margin-bottom: 50px;
 }
 
 #searchResultsBox li {
@@ -104,12 +111,8 @@ main p {
 
 
 
-
-#miniLogo {
-    display: none;
-}
-
-@media screen and (max-width: 600px) {
+/* Adjustments for when the display becomes narrow, like on mobile. */
+@media screen and (max-width: 630px) {
     header p {
         display: none;
     }
@@ -120,10 +123,33 @@ main p {
 
     #miniLogo {
         display: block;
-        width: 200px;
+        width: 130px;
     }
 
     #muscleCheckboxes label {
         font-size: 1em;
+    }
+}
+
+
+
+/* Put a grid in place for the checkboxes when they start squeezing together to tightly. */
+@media screen and (max-width: 800px) {
+    #muscleCheckboxes {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        /* The checkboxes are right aligned (see selector below), which makes the checkboxes all shift to the right. Moving the grid to the start of the flexbox and shortening its width helps to fix this unintended effect. */
+        align-self: flex-start;
+        width: 85%;
+    }
+
+    #muscleCheckboxes div {
+        /* This makes it so the boxes line up with each other. Otherwise, they're offset because their corresponding muscles have different length names. */
+        text-align: right;
+    }
+
+    #tricepsCheckbox {
+        grid-column: 2 / 3;
     }
 }

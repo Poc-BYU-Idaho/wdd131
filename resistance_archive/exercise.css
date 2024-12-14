@@ -68,7 +68,7 @@ iframe {
     display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 630px) {
     header p {
         display: none;
     }
@@ -79,6 +79,6 @@ iframe {
 
     #miniLogo {
         display: block;
-        width: 200px;
+        width: 130px;
     }
 }
