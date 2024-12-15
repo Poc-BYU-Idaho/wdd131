@@ -111,34 +111,13 @@ main p {
 
 
 
-/* Adjustments for when the display becomes narrow, like on mobile. */
-@media screen and (max-width: 630px) {
-    header p {
-        display: none;
-    }
-
-    #logo {
-        display: none;
-    }
-
-    #miniLogo {
-        display: block;
-        width: 130px;
-    }
-
-    #muscleCheckboxes label {
-        font-size: 1em;
-    }
-
-    #muscleCheckboxes input {
-        transform: scale(1.5);
-    }
-}
-
-
 
 /* Put a grid in place for the checkboxes when they start squeezing together to tightly. */
 @media screen and (max-width: 900px) {
+    header p {
+        font-size: 1.3em;
+    }
+
     #muscleCheckboxes {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -156,5 +135,42 @@ main p {
 
     #tricepsCheckbox {
         grid-column: 2 / 3;
+    }
+}
+
+
+
+/* Adjustments for when the display becomes narrow, like on mobile. */
+@media screen and (max-width: 600px) {
+    header p {
+        /* display: none; */
+        font-size: 1em;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    #miniLogo {
+        display: block;
+        width: 130px;
+    }
+
+    #muscleCheckboxes {
+        width: 100%;
+    }
+
+    #muscleCheckboxes label {
+        font-size: 1em;
+    }
+
+    #muscleCheckboxes input {
+        transform: scale(1.5);
+    }
+
+    main div div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
